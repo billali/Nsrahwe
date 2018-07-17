@@ -1,0 +1,13 @@
+Flask
+Jinja2
+Werkzeug
+Flask_Excel
+Flask_SocketIO
+Flask_Session
+requests
+pygal
+passlib
+unicodecsv
+pyexcel_xls
+pymongo
+pycryptodome

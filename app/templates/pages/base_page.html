@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Nsrahwe</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{{ url_for( 'static', filename= 'imgs/favicon.ico')}}">
+
+    <!-- Core Stylesheet -->
+    <link href="{{ url_for( 'static', filename= 'css/style.css')}}" rel="stylesheet">
+
+
+
+    <!-- Responsive CSS -->
+    <link href="{{ url_for( 'static', filename= 'css/responsive.css')}}" rel="stylesheet">
+    <link href="{{ url_for( 'static', filename= 'css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for( 'static', filename= 'css/font-awesome.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for( 'static', filename= 'css/animate.css')}}" rel="stylesheet">
+    <link href="{{ url_for( 'static', filename= 'css/magnific-popup.css')}}" rel="stylesheet">
+    <link href="{{ url_for( 'static', filename= 'css/owl.carousel.min.css')}}" rel="stylesheet">
+  
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="dorne-load"></div>
+    </div>
+
+
+
+    <!-- ***** Welcome Area Start ***** -->
+    <section class="dorne-welcome-area bg-img bg-overlay" style="background-image: url('{{ url_for( 'static', filename= 'imgs/bg-img/accra-beach.jpg')}}')">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center justify-content-center">
+                <div class="col-12 col-md-10">
+                    <div class="hero-content">
+                        <h2>Discover tourist sites in Ghana</h2>
+                    </div>
+                    <!-- Hero Search Form -->
+                    <div class="hero-search-form">
+                        <!-- Tabs -->
+                        <div class="nav nav-tabs" id="heroTab" role="tablist">
+                            <a class="nav-item nav-link active" id="nav-places-tab" data-toggle="tab" href="#nav-places" role="tab" aria-controls="nav-places" aria-selected="true">Places</a>
+                        </div>
+                        <!-- Tabs Content -->
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab">
+                                <h6 style="font-size: 20px;">Kindly select a region</h6>
+                                <form action="#" method="get">
+                                    <select id="txtSelectRegion" style="width: 547px;border-radius: 25px;font-size: 18px;" class="custom-select">
+                                        <option selected disabled="true">--Select Region--</option>
+                                        <option value="GA">Greater Accra</option>
+                                        <option value="CR">Central Region</option>
+                                        <option value="WR">Western Region</option>
+                                        <option value="ER">Eastern Region</option>
+                                        <option value="VR">Volta Region</option>
+                                        <option value="AR">Ashanti Region</option>
+                                        <option value="BR">Brong Ahafo Region</option>
+                                        <option value="TR">Tamale Region</option>
+                                        <option value="UER">Upper East Region</option>
+                                        <option value="UWR">Upper West Region</option>
+                                    </select>
+                        
+                                    <button id="btnSearch" style="border-radius: 25px;" type="submit" class="btn dorne-btn"><i class="fa fa-search pr-2" aria-hidden="true"></i> Search <span><img id="loading" style="max-width: 100%;max-height: 100%;display: none;" src="{{ url_for( 'static', filename= 'imgs/loading.gif')}}"></span></button>
+                                </form>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero Social Btn -->
+        <div class="hero-social-btn">
+           
+            <div class="social-btns">
+                <a href="https://www.instagram.com/explore/locations/921409076/ministry-of-tourism-arts-and-culture-ghana/" target="_blank"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+                <a href="https://twitter.com/motacghana?lang=en" target="_blank"><i class="fa fa-twitter fa-2x" aria-haspopup="true"></i></a>
+                <a href="https://www.facebook.com/Ministry-of-Tourism-Arts-and-Culture-Ghana-472286952868440/" target="_blank"><i class="fa fa-facebook fa-2x" aria-haspopup="true"></i> </a>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Welcome Area End ***** -->
+
+
+    <!-- ***** Features Destinations Area Start ***** -->
+    <section id="touristDestination" style="display: none;" class="dorne-features-destinations-area">
+        <div class="container-fluid">
+            <div id="resultHeading" style="display: none;" class="row">
+                <div class="col-12">
+                    <div class="section-heading dark text-center">
+                        <span></span>
+                        <h4>Search Results</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+              <div id="touristDestinationBody" class="row">
+        
+              </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Destinations Area End ***** -->
+
+
+    <!-- ****** Footer Area Start ****** -->
+    <footer class="dorne-footer-area">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 d-md-flex align-items-center justify-content-between">
+                    <div class="footer-text">
+                        <p>
+                           
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved.<i class="fa fa-heart-o" aria-hidden="true"></i> 
+
+                        </p>
+                    </div>
+                    <div class="footer-social-btns">
+                        <a href="https://www.instagram.com/explore/locations/921409076/ministry-of-tourism-arts-and-culture-ghana/" target="_blank"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+                        <a href="https://twitter.com/motacghana?lang=en" target="_blank"><i class="fa fa-twitter fa-2x" aria-haspopup="true"></i></a>
+                        <a href="https://www.facebook.com/Ministry-of-Tourism-Arts-and-Culture-Ghana-472286952868440/" target="_blank"><i class="fa fa-facebook fa-2x" aria-haspopup="true"></i> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ****** Footer Area End ****** -->
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="siteDetailsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 style="color: #800000; class="modal-title" id="exampleModalLabel">Brief Description</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div id="touristDetails" class="modal-body">
+       
+          
+   
+      </div>
+      <div class="modal-footer">
+        <button type="button" style="background-color: #fff;color: #800000;border-color: #800000;border:2px solid;" class="btn" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- jQuery-2.2.4 js -->
+    <script src="{{ url_for( 'static', filename= 'js/jquery-2.2.4.min.js')}}"></script>
+    <!-- All Plugins js -->
+    <script src="{{ url_for( 'static', filename= 'js/plugins.js')}}"></script>
+    <!-- Popper js -->
+    <script src="{{ url_for( 'static', filename= 'js/popper.min.js')}}"></script>
+    <!-- Bootstrap-4 js -->
+    <script src="{{ url_for( 'static', filename= 'js/bootstrap.min.js')}}"></script>
+    <!-- jquery-ui.min.js js -->
+    <script src="{{ url_for( 'static', filename= 'js/jquery-ui.min.js')}}"></script>
+    <!-- Active JS -->
+    <script src="{{ url_for( 'static', filename= 'js/active.js')}}"></script>
+</body>
+
+</html>
