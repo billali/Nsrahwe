@@ -22,15 +22,15 @@ Ans: Bootstrap, HTML, CSS, SQL, Python, Flask, Weather API
 ### Your planning
 
 * How are you going to divide up the work?<br/>
-Ans: Angelina : Designing the user interface and research on getting data for the vsrious tourist sites.
-     Bill:  Integrating web services such as Open Weather Maps API and Google Maps .
+Ans: Angelina : Designing the user interface and research on getting data for the vsrious tourist sites.<br/>
+     Bill:  Integrating web services such as Open Weather Maps API and Google Maps .<br/>
      Sammy: Integrating the front-end to the backend database(PHPMyAdmin)
 
 * How are you going to plan your time?<br/>
 
-Ans: We plan of finishing the project in three days time so;
-Monday: finish with the UI development then test
-Tuesday: Backend and testing
+Ans: We plan of finishing the project in three days time so;<br/>
+Monday: finish with the UI development then test<br/>
+Tuesday: Backend and testing<br/>
 Wednesday:integrate the UI and backend for testing.
 
 
