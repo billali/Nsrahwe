@@ -10,7 +10,6 @@ class Region(object):
     
 
     def getTouriteSiteByRegion(self,data):
-
 	    conn = ""
 	    out = []
 	    try:
@@ -27,45 +26,35 @@ class Region(object):
 	        cur = conn.cursor()
 	        cur.execute("""SELECT * from tbl_tourist_sites where region_shortname = '{0}'""".format(data['region_shortname']))
 	        rows = cur.fetchall()
+	        
 	        data = []
 	        for row in rows:
-	            data.append(
-	            	{
-
+	            data.append({
 	            	"id": row[0], 
                     "tourist_site_name": row[1],
                     "tourist_site_image": row[2], 
                     "tourist_alt_name": row[3],
                     "region_shortname": row[4], 
                     "tourist_site_description": row[5],
-	            }
-
-	            )
-	        if data!=[]:
-
-	        	data = {
-    			'code':'00',
-    			'msg':'Data Retrieved Successfully',
-    			'data':data
-    		}
-    		return data
-
-	        else:
-
-	        	data = {
-    			'code':'01',
-    			'msg':'Failed to retrieve data',
-    			'data':[]
-    		}
-    		return data
-
+	            })
+	        if data != []:
+	        	out = {
+					'code': '00',
+					'msg': 'Data Retrieved Successfully',
+					'data': data
+				}
+			else:
+	        	out = {
+					'code': '01',
+					'msg': 'Failed to retrieve data',
+					'data': []
+				}
 	    except:
 	        out = {"err": "General SQL Error"}
+	        
 	    return json.dumps(out)
 
-
 	def getTouriteSiteById(self,data):
-
 	    conn = ""
 	    out = []
 	    try:
