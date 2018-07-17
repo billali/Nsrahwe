@@ -42,7 +42,7 @@ def selected_region():
 	if request.method == 'POST':
 		request_data = request.form.to_dict()
 		data= region.getTouriteSiteByRegion(request_data)
-		return jsonify(**data)
+		return json.dumps(data)
 	else:
 		data = {
     			'code':'02',
@@ -55,13 +55,13 @@ def site_id():
 	if request.method == 'POST':
 		request_data = request.form.to_dict()
 		data= region.getTouriteSiteById(request_data)
-		return jsonify(**data)
+		return json.dumps(data)
 	else:
 		data = {
     			'code':'02',
     			'msg':'Request Method Invalid'
     	}
-		return jsonify(**data)
+		return json.dumps(data)
 
 
 
