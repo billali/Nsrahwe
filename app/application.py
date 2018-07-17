@@ -17,7 +17,6 @@ region = Region()
 
 # Creating flask application instance
 app = Flask(__name__)
-# excel.init_excel(app)
 
 # Configurations
 app.config['PROPAGATE_EXCEPTIONS'] = True
