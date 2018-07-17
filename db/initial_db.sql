@@ -304,7 +304,7 @@ Christiansborg. They were used to hold slaves before they were loaded onto ships
 especially the Caribbean.
  This gate of no return was the last stop before crossing the Atlantic Ocean.'),
 ('  Elmina Castle','  Elmina-Castle.jpg', 'Elmina-Castle pic','CR', 
-'Elmina Castle was erected by the Portuguese in 1482 as São Jorge da Mina (St. George of the Mine) Castle, also 
+'Elmina Castle was erected by the Portuguese in 1482 as So Jorge da Mina (St. George of the Mine) Castle, also 
 known simply as Mina or Feitoria da Mina) in
 present-day Elmina, Ghana (formerly the Gold Coast). It was the first
  trading post built on the Gulf of Guinea, so is the oldest European building in existence
@@ -323,7 +323,7 @@ Castle is a popular historical site, and was a major filming location for Werner
  Verde. The castle is recognized by UNESCO as
  a World Heritage Site. '),
 ('  Gbelle Game Reserve','  Gbelle-Game-Reserve.jpg', 'Gbelle-Game-Reserve pic','UWR', 
-'The Gbelle Reserve which measures 565km² is an important sanctuary for endangered species of wildlife in the country.
+'The Gbelle Reserve which measures 565km is an important sanctuary for endangered species of wildlife in the country.
  The flora is Guinea Savannah vegetation, while
 the fauna boasts a collection of animals such as buffalos,
  elephants, bucks, rhinos, and the largest hers of roan antelopes in Ghana. Also, the reserve is an important
@@ -341,7 +341,7 @@ The nineteenth-century structure is built
  using sundried mud-brick walls and Y-shaped wooden columns to support flat roofs of a bush-pole framework which
  are covered with mud.
  While most of the palace, including the courtyards and rooms, had deteriorated from a lack 
-of regular maintenance, the front façade remained in remarkable condition with a 
+of regular maintenance, the front faade remained in remarkable condition with a 
 series of impressive buttresses 
 with pinnacles rising above the parapet. '),
 ('Gbollu Defence Wall', 'Gbollu Defence Wall.jpg', 'Gbollu Defence Wall pic','UWR', 
@@ -362,7 +362,7 @@ encounters with wild elephants which can always be see near the lodge as they ar
 interesting populations of large and small mammals, birds, reptiles and insects. '),
 ('Larabanga Mosque', 'Larabanga Mosque.jpg', 'Larabanga Mosque pic','NR', 
 'A 13th century mosque, believed to be first built by Moorish traders, it is one of the holiest site in Ghana.
- Its distinctive façade has been widely photographed. '),
+ Its distinctive faade has been widely photographed. '),
 ('Daboya', 'Daboya.jpg', 'Daboya pic','NR', 
 'Daboya is 89km west of tamale, Daboya is the 16th century town from the Gonja Kingdom, and a famous source for hand made textiles. '),
 ('Salaga', 'salaga.jpg', 'salaga pic','NR', 
