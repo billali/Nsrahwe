@@ -1,8 +1,8 @@
--- creating the database
-CREATE nsrahwe;
+-- drop tables to clean DB
+DROP TABLE tourist_site;
 
 -- creating tables
-CREATE tourist_site(
+CREATE TABLE tourist_site(
    id SERIAL PRIMARY KEY     NOT NULL,
    tourist_site_name          VARCHAR(50)    NOT NULL,
    tourist_site_image          VARCHAR(50)    NOT NULL,
@@ -11,7 +11,7 @@ CREATE tourist_site(
   tourist_site_description         TEXT    NOT NULL  
    );
 
--- inserting data into the table created
+--inserting data into the table created
 INSERT INTO tourist_site(tourist_site_name,tourist_site_image,tourist_alt_name,region_shortname,tourist_site_description) VALUES
 ('Manhyia Palace Museum','Manhyia-Palace-Museum.jpg', 'Manhyia-Palace-Museum pic','AR', 'The Manhyia Palace is the seat of the Asantehene of Asanteman, as well as his official residence.
 It is located in Kumasi, the capital of the Ashanti Kingdom and Ashanti Region. 
@@ -31,8 +31,8 @@ it was trying to save the animal. The lake is seen as very sacred place to the A
 The lake is about a half an hour drive from Kumasi. The shore is dotted with villages and it is believed the population
 in the area is close to 70,000 people.'),
 ('Okomfo Anokye Sword Site','okomfo-anokye-sword.jpg', 'okomfo-anokye-sword pic','AR', 
-'The ‘unmovable’ Sword of the Komfo Anokye remains in the grounds of the Okomfo Anokye Teaching Hospital, where he
-pushed it. Historical accounts have it that, Okomfo Anokye one day “planted” a sword in the ground, and told those 
+'The unmovable Sword of the Komfo Anokye remains in the grounds of the Okomfo Anokye Teaching Hospital, where he
+pushed it. Historical accounts have it that, Okomfo Anokye one day planted a sword in the ground, and told those 
 present at the event that the day the sword would be uprooted, the Asante Kingdom would collapse. Numerous people
 over the years have tried to uproot the sword but all in vain. What a mighty legacy and magic left!'),
 ('Independence Square','independence-square.jpg', 'independence-square pic','GA', 
@@ -74,7 +74,7 @@ president of Ghana John Atta Mills is buried; in a bird sanctuary, overlooking t
 it is located on 
 the Pumpum river, a tributary of the Black Volta, about 4 kilometres (2.5 mi) north of Kintampo 
 municipality, on the 
-Kumasi–Tamale road. This waterfall, one of the main natural attractions in the area, is hidden in
+KumasiTamale road. This waterfall, one of the main natural attractions in the area, is hidden in
 the forest and it is 
 formed by 3 main drops where the longest drop measures 25 metres (82 ft) in height, and, after a 
 number of steps and
@@ -95,14 +95,14 @@ coarse jute-like cloth called "Kyenkyen" which is produced from the bark of a tr
 machine-made textiles. 
 '),
 (' Lake Volta','volta-lake.jpg', 'volta-lake pic','BR', 
-'Lake Volta lies along the Greenwich Meridian, and just six degrees of latitude north of the Equator. The lake’s northernmost
+'Lake Volta lies along the Greenwich Meridian, and just six degrees of latitude north of the Equator. The lakes northernmost
  
 point is close to the town of Yapei, and its southernmost extreme is at the Akosombo Dam, 520 kilometers (320 mi) downstream
  
 from Yapei. Akosombo Dam holds back both the White Volta River and the Black Volta River, which formerly converged, where
  the
  middle of the reservoir now lies, to form the single Volta River. The present Volta River flows from the outlets of
- the dam’s 
+ the dams 
 powerhouse and spillways to the Atlantic Ocean in southmost Ghana.
 '),
 (' Akatekyi Crocodile Pond','Akatekyi Crocodile Pond.jpg', 'Akatekyi Crocodile Pond pic','WR', 
@@ -149,11 +149,11 @@ It remained in the possession of
 ('Fort Sebastian at Shama','Fort Sebastian at Shama.jpg', 'Fort Sebastian at Shama pic','WR', 
 'Sebastian was originally constructed and named by the Portuguese c.1520-26. However, its first appearance on a map was
 
- in the context of Di Castaldi’s Venetian map of 1564. In putting up the fort, the Portuguese hoped to stop English 
+ in the context of Di Castaldis Venetian map of 1564. In putting up the fort, the Portuguese hoped to stop English 
 ships
  from interfering in their trade in the Shama area. Sebastian was originally constructed and named by the Portuguese
  c.1520-26. 
-However, its first appearance on a map was in the context of Di Castaldi’s Venetian map of 1564. In putting up
+However, its first appearance on a map was in the context of Di Castaldis Venetian map of 1564. In putting up
  the fort,
  the Portuguese hoped to stop English ships from interfering in their trade in the Shama area.
 Built as a Dutch
@@ -164,8 +164,8 @@ struck back
  under De Ruyter, re-occupied it the same year and rebuilt it in 1666. Abandoned it before 1870. Ceded to Britain
  in 1872.
  Restored in 1954-57.'),
-('Naa Gbewaa’s Shrine','Naa Gbewaa’s Shrine.jpg', 'Naa Gbewaa’s Shrine pic','UER', 
-'This traditional shrine commemorates Naa Gbewaa’s at Pusiga who founded the mole-Dagbon tribe in the 13th century. Pusiga, 
+('Naa Gbewaas Shrine','Naa Gbewaas Shrine.jpg', 'Naa Gbewaas Shrine pic','UER', 
+'This traditional shrine commemorates Naa Gbewaas at Pusiga who founded the mole-Dagbon tribe in the 13th century. Pusiga, 
 90 km east
  of Bolgatanga, history has it that Naa Gbewa, founder of the Mole-Dagbani tribes, finally settled at Pusiga and
  died there in the 13th
@@ -216,7 +216,7 @@ According to local guides, the mona monkeys native to this area were once consid
 
 '),
 ('Mt. Gemi(Amedzofe)','Mt. Gemi.jpg', 'Mt. Gemi pic','VR', 
-'Mount Gemi (pronounced “geh-mee) is one of the tallest mountains in all of Ghana. As the nearby town of Amedzofe is
+'Mount Gemi (pronounced geh-mee) is one of the tallest mountains in all of Ghana. As the nearby town of Amedzofe is
  already 
 very high in altitude, the peak of the mountain is actually a short climb from town. At the very peak of the 
 mountain is 
@@ -240,7 +240,7 @@ From the top you may be able to see tens of
 
 '),
 (' Aburi Botanical Gardens',' Aburi Botanical Gardens1.jpg', ' Aburi Botanical Gardens pic','ER', 
-'Aburi is located on the Akwapim-Togo Range of Ghana. It’s just three quarters of an hour drive from Accra, the capital of Ghana.
+'Aburi is located on the Akwapim-Togo Range of Ghana. Its just three quarters of an hour drive from Accra, the capital of Ghana.
 
  The cool mountainous weather of Aburi makes it a destination for people who love the cool side of life. 
 Located in this 
@@ -254,14 +254,14 @@ area of 64.8 hectares. It was opened in March, 1890.
 
 '),
 (' Tetteh Quarshies Cocoa Farm','tetteh-quarshies-cocoa-farm.jpg', ' tetteh-quarshies-cocoa-farm pic','ER', 
-'This was the first cocoa farm in This was the first cocoa farm in Ghana and the birthplace of Ghana’s burgeoning cocoa 
+'This was the first cocoa farm in This was the first cocoa farm in Ghana and the birthplace of Ghanas burgeoning cocoa 
 industry. The original seedlings 
 were brought from Fernando Po Island just off the coast of Equatorial Guinea by Tetteh 
 Quarshie himself in 1879. Three original trees remain.
- There’s little to see (don’t expect a visitor centre or shop), 
-but a guide will take you around the plantation for a few cedi – get the price first.
+ Theres little to see (dont expect a visitor centre or shop), 
+but a guide will take you around the plantation for a few cedi  get the price first.
  Contact the caretaker at the Mampong
- Chief’s Palace for entry.
+ Chiefs Palace for entry.
 
 '),
 ('  Okomfo Anokyes Shrine',' Okomfo Anokyes shrine1.jpg', ' Okomfo Anokyes shrine1 pic','ER', 
@@ -302,7 +302,7 @@ Castle, Cape Coast Castle and the Kakum Rainforest.'),
  Elmina Castle and Fort 
 Christiansborg. They were used to hold slaves before they were loaded onto ships and sold in the Americas, 
 especially the Caribbean.
- This “gate of no return” was the last stop before crossing the Atlantic Ocean.'),
+ This gate of no return was the last stop before crossing the Atlantic Ocean.'),
 ('  Elmina Castle','  Elmina-Castle.jpg', 'Elmina-Castle pic','CR', 
 'Elmina Castle was erected by the Portuguese in 1482 as São Jorge da Mina (St. George of the Mine) Castle, also 
 known simply as Mina or Feitoria da Mina) in
@@ -329,13 +329,13 @@ the fauna boasts a collection of animals such as buffalos,
  elephants, bucks, rhinos, and the largest hers of roan antelopes in Ghana. Also, the reserve is an important
  
 area for bird watching boasting a concentration of indigenous and migratory bird species. '),
-(' Wa Naa’s Palace','  PalaceoftheWaNaa1.jpg', 'PalaceoftheWaNaa1 pic','UWR', 
-'Wa Naa’s Palace is an extraordinary example of traditional Sudanese mud-brick architecture. Few historic earthen
+(' Wa Naas Palace','  PalaceoftheWaNaa1.jpg', 'PalaceoftheWaNaa1 pic','UWR', 
+'Wa Naas Palace is an extraordinary example of traditional Sudanese mud-brick architecture. Few historic earthen
  buildings of this style remain in the region because of
 the scarcity of skilled artisans needed to undertake
  annual maintenance. The palace is home to the king of the Wala people, who comprise the majority population 
 of Wa region.
- In the heart of Wa Town, Wa Naa’s Palace is a major cultural attraction, as well as a monument 
+ In the heart of Wa Town, Wa Naas Palace is a major cultural attraction, as well as a monument 
 of political, religious, and social significance for local residents. 
 The nineteenth-century structure is built
  using sundried mud-brick walls and Y-shaped wooden columns to support flat roofs of a bush-pole framework which
@@ -347,12 +347,12 @@ with pinnacles rising above the parapet. '),
 ('Gbollu Defence Wall', 'Gbollu Defence Wall.jpg', 'Gbollu Defence Wall pic','UWR', 
 'Gbollu, 70km north of Wa, was part of the slave route. In the 1`9th century Gbollu Koro Liman built the wall as
  part of its defence against the slavers. '),
-('George Ferguson’s Tomb', 'George Ferguson’s Tomb.jpg', 'George Ferguson’s Tomb pic','UWR', 
+('George Fergusons Tomb', 'George Fergusons Tomb.jpg', 'George Fergusons Tomb pic','UWR', 
 'George Ekem Fergusion was a Ghanaian colonial agent who was instrumental in convincing local chiefs to sign treaties 
 of friendship with the British. He was later
  (1897) killed by slave raiders, but his tomb preserved in Wa. '),
 ('Mole National Park', 'Mole National Park.jpg', 'Mole National Park pic','NR', 
-'Mole National Park is Ghana’s biggest and best National Park and is located in West Gonja District of the Northern Region.
+'Mole National Park is Ghanas biggest and best National Park and is located in West Gonja District of the Northern Region.
  It is 24 km from Damongo, the district 
 capital, 146km south east of Tamale, the Regional capital. The park is 700
 km from Accra and 430km from Kumasi. Mole National Park is 4,577 square kilometres and 
