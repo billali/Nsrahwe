@@ -1,7 +1,7 @@
-#creating the database
+-- creating the database
 CREATE nsrahwe;
 
-#creating tables
+-- creating tables
 CREATE tourist_site(
    id SERIAL PRIMARY KEY     NOT NULL,
    tourist_site_name          VARCHAR(50)    NOT NULL,
@@ -11,7 +11,7 @@ CREATE tourist_site(
   tourist_site_description         TEXT    NOT NULL  
    );
 
-#inserting data into the table created
+-- inserting data into the table created
 INSERT INTO tourist_site(tourist_site_name,tourist_site_image,tourist_alt_name,region_shortname,tourist_site_description) VALUES
 ('Manhyia Palace Museum','Manhyia-Palace-Museum.jpg', 'Manhyia-Palace-Museum pic','AR', 'The Manhyia Palace is the seat of the Asantehene of Asanteman, as well as his official residence.
 It is located in Kumasi, the capital of the Ashanti Kingdom and Ashanti Region. 
@@ -62,9 +62,9 @@ The building houses the three resident
 companies of the National Dance Company, the National Symphony Orchestra, and the National Theatre Players.'),
 ('The Osu Castle(christiansborg)-Accra','The osu castle(christiansborg)-Accra.jpg', 'The osu castle(christiansborg)-Accra pic','GA', 
 'Osu Castle, also known as Fort Christiansborg or simply the Castle, is a castle located in Osu, Accra, Ghana on the coast of the 
-Atlantic Ocean's Gulf of Guinea. The first substantial fort was built by Denmark-Norway in the 1660s, though the castle
+Atlantic Oceans Gulf of Guinea. The first substantial fort was built by Denmark-Norway in the 1660s, though the castle
  has changed hands between Denmark-Norway, Portugal, the Akwamu, Britain, and finally post-Independence Ghana, and was
- rebuilt numerous times. For most of the castle's history, it has been the seat of government in Ghana with some interruptions, 
+ rebuilt numerous times. For most of the castles history, it has been the seat of government in Ghana with some interruptions, 
 the latest when the John Kufuor administration moved the seat of government to Golden Jubilee House after 6 January 2009,
  which was quickly reversed by the incoming John Atta Mills administration. It also serves as the place where the late 
 president of Ghana John Atta Mills is buried; in a bird sanctuary, overlooking the Atlantic Ocean.
@@ -177,14 +177,14 @@ struck back
  is a sanctuary for crocodiles.
  The crocodiles are said to be totems for the people of Kassena, who reside in Paga and the
  surrounding communities. 
-It is believed that each native of Paga has a corresponding crocodile representing each person's
+It is believed that each native of Paga has a corresponding crocodile representing each persons
  soul. Local tradition has
  it that there have been actual instances when deaths of important personalities in the community
  coincided with that of 
 some crocodiles. The reptiles are normally enticed out of the pond by the whistling of the
  caretaker and the brandishing 
 of a fowl, which the crocodiles quickly snatch with their snouts. If you are courageous,
- you can sit on, or hold the beast's
+ you can sit on, or hold the beasts
  tail for a good camera pose. The caretaker charges a fee for the fowl and basic 
 interpretation.'),
 ('Tongo Whispering Rocks','Tongo Rocks.jpg', 'Tongo Rocks pic','UER', 
@@ -253,7 +253,7 @@ Aburi Botanical Gardens is a botanical garden in Aburi in Eastern region of Sout
 area of 64.8 hectares. It was opened in March, 1890.
 
 '),
-(' Tetteh Quarshie's Cocoa Farm','tetteh-quarshies-cocoa-farm.jpg', ' tetteh-quarshies-cocoa-farm pic','ER', 
+(' Tetteh Quarshies Cocoa Farm','tetteh-quarshies-cocoa-farm.jpg', ' tetteh-quarshies-cocoa-farm pic','ER', 
 'This was the first cocoa farm in This was the first cocoa farm in Ghana and the birthplace of Ghana’s burgeoning cocoa 
 industry. The original seedlings 
 were brought from Fernando Po Island just off the coast of Equatorial Guinea by Tetteh 
@@ -264,14 +264,14 @@ but a guide will take you around the plantation for a few cedi – get the price f
  Chief’s Palace for entry.
 
 '),
-('  Okomfo Anokye's Shrine',' Okomfo Anokye's shrine1.jpg', ' Okomfo Anokye's shrine1 pic','ER', 
+('  Okomfo Anokyes Shrine',' Okomfo Anokyes shrine1.jpg', ' Okomfo Anokyes shrine1 pic','ER', 
 'Okomfo Anokye, a legendary priest, is credited with founding the great Asante Empire. A shrine is dedicated to his 
 supernatural exploits at Awukugua-Akwapim. 
 Scattered throughout the towns on the Akwapim Ridge (Awukugua, Apirede,
  Amanokrom, Brekuso) mysterious phenomena attributed to this 18th century priest can be
  found; for example, his had and 
 foot imprints are permanently etched in solid stone. There is also an ""Oware Board"" which he reportedly carved from 
-'stone'. 
+stone. 
 The Shrine is located at Awukugua 60km from Koforidua.'),
 ('  Akonedi Shrine, larteh',' Akonedi Shrine, larteh.jpg', ' Akonedi Shrine, larteh pic','ER', 
 'On the Akwapim Ridge the fetish shrine is an important place of traditional healing and religious ceremonies.
@@ -319,7 +319,7 @@ in 1872, the Dutch Gold Coast, including
 Britain granted the Gold Coast its independence in 1957, and 
 control of the castle was transferred to the nation formed out of the colony, present-day Ghana. Today
  Elmina 
-Castle is a popular historical site, and was a major filming location for Werner Herzog's 1987 drama film Cobra
+Castle is a popular historical site, and was a major filming location for Werner Herzogs 1987 drama film Cobra
  Verde. The castle is recognized by UNESCO as
  a World Heritage Site. '),
 ('  Gbelle Game Reserve','  Gbelle-Game-Reserve.jpg', 'Gbelle-Game-Reserve pic','UWR', 
