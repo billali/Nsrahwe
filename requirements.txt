@@ -1,4 +1,10 @@
-Flask
-Jinja2
-Werkzeug
 
+Flask==1.0.2
+gunicorn==19.9.0
+Jinja2==2.10
+pyowm==2.8.0
+rainbowhat==0.1.0
+requests==2.18.4
+requests-oauthlib==0.7.0
+urllib3==1.23
+Werkzeug==0.14.1
