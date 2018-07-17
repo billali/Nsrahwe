@@ -23,28 +23,27 @@ class Region(object):
         except:
             out = {"err": "Unable to connect to the database"}
         try:
-         cur = conn.cursor()
-         cur.execute("""SELECT * from tbl_tourist_sites where region_shortname = '{0}'""".format(data['region_shortname']))
-         rows = cur.fetchall()
+            cur = conn.cursor()
+            cur.execute("""SELECT * from tbl_tourist_sites where region_shortname = '{0}'""".format(data['region_shortname']))
+            rows = cur.fetchall()
          
-         data = []
-         for row in rows:
-          data.append({ "id": row[0], "tourist_site_name": row[1], "tourist_site_image": row[2], "tourist_alt_name": row[3], "region_shortname": row[4], "tourist_site_description": row[5] })
+            data = []
+            for row in rows:
+                data.append({ "id": row[0], "tourist_site_name": row[1], "tourist_site_image": row[2], "tourist_alt_name": row[3], "region_shortname": row[4], "tourist_site_description": row[5] })
           
-         if data == []:
-          out = {'code': '01', 'msg': 'Failed to retrieve data', 'data': [] }
-         else:
-          out = { 'code': '00', 'msg': 'Data Retrieved Successfully', 'data': data }
-         ""   
+            if data == []:
+                out = {'code': '01', 'msg': 'Failed to retrieve data', 'data': [] }
+            else:
+                out = { 'code': '00', 'msg': 'Data Retrieved Successfully', 'data': data }
         except:
             out = {"err": "General SQL Error"}
-       return json.dumps(out)
+        return json.dumps(out)
 
     def getTouriteSiteById(self,data):
-       conn = ""
-       out = []
-       try:
-         url = urlparse.urlparse(os.environ['DATABASE_URL'])
+        conn = ""
+        out = []
+        try:
+            url = urlparse.urlparse(os.environ['DATABASE_URL'])
             dbname = url.path[1:]
             user = url.username
             password = url.password
@@ -59,36 +58,23 @@ class Region(object):
             rows = cur.fetchall()
             data = []
             for row in rows:
-                data.append(
-                   {
-
-                   "id": row[0], 
+                data.append({
+                    "id": row[0], 
                     "tourist_site_name": row[1],
                     "tourist_site_image": row[2], 
                     "tourist_alt_name": row[3],
                     "region_shortname": row[4], 
-                    "tourist_site_description": row[5],
-                }
-
-                )
-            if data!=[]:
-
-               data = {
-             'code':'00',
-             'msg':'Data Retrieved Successfully',
-             'data':data
-           }
-           return data
-
+                    "tourist_site_description": row[5] })
+            if data != []:
+                out = {
+                    'code':'00',
+                    'msg':'Data Retrieved Successfully',
+                    'data':data }
             else:
-
-               data = {
-             'code':'01',
-             'msg':'Failed to retrieve data',
-             'data':[]
-           }
-           return data
-
+                out = {
+                    'code':'01',
+                    'msg':'Failed to retrieve data',
+                    'data':[] }
         except:
             out = {"err": "General SQL Error"}
         return json.dumps(out)
