@@ -98,11 +98,11 @@ class Region(object):
         return json.dumps(out)
   
 
-if __name__ == '__main__':
-    weather = Region()
+# if __name__ == '__main__':
+#     weather = Region()
 
-    city = 'accra'
-    weather_data = weather.getTouristSiteWeather(city)
-    print("Printing weather condition")
-    print(weather_data)
+#     city = 'accra'
+#     weather_data = weather.getTouristSiteWeather(city)
+#     print("Printing weather condition")
+#     print(weather_data)
 
