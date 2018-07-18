@@ -1,4 +1,5 @@
 import json
+import requests
 import psycopg2
 import urllib.parse as urlparse
 import os
@@ -7,6 +8,20 @@ class Region(object):
     """docstring for UserFunctions"""
     def __init__(self):
         super(Region, self).__init__()
+
+    def getTouristSiteWeather(self,city):
+        print(city)
+        if city!="":
+            url = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric"+ "&APPID=e2cd7d4ec205a87e9fedc5b591cedd72"
+            result = requests.get(url)
+            result = json.loads(result.text)
+            weather_data = {
+                'temp': result['main']['temp'],
+                'humidity': result['main']['humidity']
+            }
+            
+
+            return weather_data
     
 
     def getTouriteSiteByRegion(self,data):
@@ -65,10 +80,13 @@ class Region(object):
                     "tourist_alt_name": row[3],
                     "region_shortname": row[4], 
                     "tourist_site_description": row[5] })
+            
             if data != []:
+                # weather_data = weather.getTouristSiteWeather(data['city'])
                 out = {
                     'code':'00',
                     'msg':'Data Retrieved Successfully',
+                    #'weather':weather_data,
                     'data':data }
             else:
                 out = {
@@ -79,3 +97,12 @@ class Region(object):
             out = {"err": "General SQL Error"}
         return json.dumps(out)
   
+
+if __name__ == '__main__':
+    weather = Region()
+
+    city = 'accra'
+    weather_data = weather.getTouristSiteWeather(city)
+    print("Printing weather condition")
+    print(weather_data)
+
