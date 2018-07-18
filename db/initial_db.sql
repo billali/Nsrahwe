@@ -1,3 +1,5 @@
+--drop table
+DROP TABLE tourist_site;
 
 -- creating tables
 CREATE TABLE tourist_site(
