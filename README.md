@@ -8,6 +8,6 @@ Team:
 
 * Sammy (Integration lead)
 
-*Angie
+* Angie
 
 
