@@ -11,7 +11,7 @@ from flask import url_for
 import json
 import os
 from app.model import Region
-from app.model import db
+# from app.model import db
 
 region = Region()
 
