@@ -96,7 +96,6 @@ class Region(object):
                 out = {
                     'code':'00',
                     'msg':'Data Retrieved Successfully',
-                    #'weather':weather_data,
                     'data':data }
             else:
                 out = {
