@@ -10,8 +10,7 @@ from flask import redirect
 from flask import url_for
 import json
 from app.model import Region
-from flask.ext.sqlalchemy import SQLAlchemy
-
+from app.model import db
 
 region = Region()
 
@@ -24,7 +23,7 @@ app.config['PROPAGATE_EXCEPTIONS'] = True
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 app.config.from_object(__name__)
 
-db = SQLAlchemy(app)
+db.init_app(app)
 
 # Sample HTTP error handling
 @app.errorhandler(404)

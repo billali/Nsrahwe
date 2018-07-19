@@ -3,7 +3,7 @@ import requests
 import psycopg2
 import urllib.parse as urlparse
 import os
-from app.application import db
+from flask_sqlalchemy import SQLAlchemy
 
 # class Region(object):
 #     """docstring for UserFunctions"""
@@ -101,7 +101,7 @@ from app.application import db
 
 
 
-
+db = SQLAlchemy()
 
 class Region(db.Model):
     __tablename__ = "tourist_site"
