@@ -152,8 +152,8 @@ class Region(db.Model):
                 out = {'code': '01', 'msg': 'Failed to retrieve data', 'data': [] }
             else:
                 out = { 'code': '00', 'msg': 'Data Retrieved Successfully', 'data': result }
-        except:
-            out = {"err": "General SQL Error"}
+        except Exception as e:
+            out = {"err": str(e)}
         return json.dumps(out)
 
     def getTouriteSiteById(self,data):
