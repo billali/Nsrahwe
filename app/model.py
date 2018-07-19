@@ -76,6 +76,7 @@ class Region(object):
         try:
             print("Printing incomg request in getTouriteSiteById")
             print(data)
+
             cur = conn.cursor()
             cur.execute("""SELECT * from tourist_site where id = '{0}'""".format(data['id']))
             rows = cur.fetchall()
@@ -89,11 +90,11 @@ class Region(object):
                     "region_shortname": row[4], 
                     "tourist_site_description": row[5],
                     "tourist_site_area_name": row[6] })
-            
+                
+            weather_data = self.getTouristSiteWeather(data['tourist_site_area_name'])
+            print("Printing weather_data in site id")
+            print(weather_data)
             if data != []:
-                weather_data = self.getTouristSiteWeather(data['tourist_site_area_name'])
-                print("Printing weather_data in site id")
-                print(weather_data)
                 out = {
                     'code':'00',
                     'msg':'Data Retrieved Successfully',
