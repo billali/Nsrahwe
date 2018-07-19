@@ -151,13 +151,14 @@
 
 function get_site_id(id,tourist_site_area_name){
     
-    console.log("Printing id");
-    console.log(id);
-
+ 
     var formData = {
         'id': id,
         'tourist_site_area_name':tourist_site_area_name
     };
+    console.log("Printing formData");
+    console.log(formData);
+
 
     $.postJSON("/site_id", formData, function(data){
 

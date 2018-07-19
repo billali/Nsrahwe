@@ -84,7 +84,8 @@ class Region(object):
                     "tourist_site_image": row[2], 
                     "tourist_alt_name": row[3],
                     "region_shortname": row[4], 
-                    "tourist_site_description": row[5] })
+                    "tourist_site_description": row[5],
+                    "tourist_site_area_name": row[6] })
             
             if data != []:
                 weather_data = self.getTouristSiteWeather(data['tourist_site_area_name'])
