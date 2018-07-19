@@ -119,13 +119,11 @@
                 
                 var tblBodyHtml = ""
 
-                
-              
-                tblBodyHtml += '<div onclick="get_site_id(\''+ data.data[i]['id'] +'\',\''+ data.data[i]['tourist_site_area_name'] +'\')" class="col-md-3">'+
+                tblBodyHtml += '<div onclick="get_site_id(\''+ data.data['id'] +'\',\''+ data.data['tourist_site_area_name'] +'\')" class="col-md-3">'+
                                     '<div class="card" style="width: 15rem;height:20rem;cursor:pointer;">'+
-                                      '<img style="max-width: 238px;height: 238px;" class="card-img-top" src="static/imgs/bg-img/'+data.data[i]['tourist_site_image']+'" alt="'+data.data[i]['tourist_alt_name']+'">'+
+                                      '<img style="max-width: 238px;height: 238px;" class="card-img-top" src="static/imgs/bg-img/'+data.data['tourist_site_image']+'" alt="'+data.data['tourist_alt_name']+'">'+
                                       '<div class="card-body">'+
-                                        '<h5 class="card-title">'+data.data[i]['tourist_site_name']+'</h5>'+
+                                        '<h5 class="card-title">'+data.data['tourist_site_name']+'</h5>'+
                                     
                                       '</div>'+
                                     '</div>'+
