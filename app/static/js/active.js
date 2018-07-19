@@ -119,7 +119,7 @@
                 
                 var tblBodyHtml = ""
 
-                for (var i = 0; i < data.data.length; i++) {
+                
               
                 tblBodyHtml += '<div onclick="get_site_id(\''+ data.data[i]['id'] +'\',\''+ data.data[i]['tourist_site_area_name'] +'\')" class="col-md-3">'+
                                     '<div class="card" style="width: 15rem;height:20rem;cursor:pointer;">'+
@@ -136,9 +136,6 @@
                 $('#touristDestinationBody').html(tblBodyHtml);
                 $('#touristDestination').show("fast");
 
-            }
-            
-
             }else{
 
             }
@@ -146,9 +143,6 @@
             });
         }
     });
-console.log("Printing site id and area name response ");
-        console.log(data);
-
 
 function get_site_id(id,tourist_site_area_name){
     
@@ -168,10 +162,7 @@ function get_site_id(id,tourist_site_area_name){
             
         if (data.code == "00") {
 
-            var tblBodyHtml = ""
-
-            /*for (var i = 0; i < data.data.length; i++) {*/
-          
+            var tblBodyHtml = ""          
             tblBodyHtml += '<img style="max-height: 286px;" class="card-img-top" src="static/imgs/bg-img/'+data.data['tourist_site_image']+'" alt="'+data.data['tourist_alt_name']+'">'+
                           '<div class="">'+
                             '<p style="padding-top: 1em;color: #800000;">'+data.data['tourist_site_description']+'</p>'+
@@ -183,9 +174,7 @@ function get_site_id(id,tourist_site_area_name){
             $('#touristDetails').html("");
             $('#touristDetails').html(tblBodyHtml);
             $('#siteDetailsModal').modal("show");
-            
 
-     /*   }*/
         }else{
 
         }

@@ -45,6 +45,7 @@ def selected_region():
 	if request.method == 'POST':
 		request_data = request.form.to_dict()
 		data= region.getTouriteSiteByRegion(request_data)
+
 		return data
 	else:
 		data = {
