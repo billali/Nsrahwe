@@ -3,7 +3,7 @@ import requests
 import psycopg2
 import urllib.parse as urlparse
 import os
-from app import db
+from app.application import db
 
 # class Region(object):
 #     """docstring for UserFunctions"""
