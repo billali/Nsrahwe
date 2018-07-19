@@ -25,7 +25,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 app.config.from_object(__name__)
 
 db = SQLAlchemy(app)
-heroku = Heroku(app)
+
 # Sample HTTP error handling
 @app.errorhandler(404)
 def not_found(error):
