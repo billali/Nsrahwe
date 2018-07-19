@@ -171,8 +171,8 @@ function get_site_id(id,tourist_site_area_name){
             tblBodyHtml += '<img style="max-height: 286px;" class="card-img-top" src="static/imgs/bg-img/'+data.data[0]['tourist_site_image']+'" alt="'+data.data[0]['tourist_alt_name']+'">'+
                           '<div class="">'+
                             '<p style="padding-top: 1em;color: #800000;">'+data.data[0]['tourist_site_description']+'</p>'+
-                            '<p style="color: #800000;font-weight: bold;">Current Temperature : <span> 90&deg;C</span></p>'+
-                            '<p style="color: #800000;font-weight: bold;">Current Wind : <span> 90mph </span></p>'+
+                            '<p style="color: #800000;font-weight: bold;">Current Temperature : <span> '+data.weather['temp']+'&deg;C</span></p>'+
+                            '<p style="color: #800000;font-weight: bold;">Current Humidity : <span> '+data.weather['humidity']+'mph </span></p>'+
                           '</div>';
 
            
