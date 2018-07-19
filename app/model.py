@@ -74,15 +74,13 @@ class Region(object):
         except Exception as e:
             out = {"err1": str(e)}
         try:
-            print("Printing incomg request in getTouriteSiteById")
-            print(data)
-
+            
             cur = conn.cursor()
             cur.execute("""SELECT * from tourist_site where id = '{0}'""".format(data['id']))
             rows = cur.fetchall()
-            data = []
+            myList = []
             for row in rows:
-                data.append({
+                myList.append({
                     "id": row[0], 
                     "tourist_site_name": row[1],
                     "tourist_site_image": row[2], 
@@ -90,11 +88,11 @@ class Region(object):
                     "region_shortname": row[4], 
                     "tourist_site_description": row[5],
                     "tourist_site_area_name": row[6] })
-                
-            weather_data = self.getTouristSiteWeather(data['tourist_site_area_name'])
-            print("Printing weather_data in site id")
-            print(weather_data)
-            if data != []:
+            
+            if myList != []:
+                weather_data = self.getTouristSiteWeather(data['tourist_site_area_name'])
+                print("Printing weather_data in site id")
+                print(weather_data)
                 out = {
                     'code':'00',
                     'msg':'Data Retrieved Successfully',
