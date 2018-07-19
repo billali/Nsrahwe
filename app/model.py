@@ -38,7 +38,7 @@ class Region(object):
             port = url.port
             conn = psycopg2.connect(dbname=dbname, user=user, password=password, host=host, port=port)
         except Exception as e:
-            out = {"err1": str(e)}
+            out = {"err": str(e)}
         try:
             cur = conn.cursor()
             cur.execute("""SELECT * from tbl_tourist_site where region_shortname = '{0}'""".format(data['region_shortname']))
@@ -52,8 +52,8 @@ class Region(object):
                 out = {'code': '01', 'msg': 'Failed to retrieve data', 'data': [] }
             else:
                 out = { 'code': '00', 'msg': 'Data Retrieved Successfully', 'data': data }
-        except:
-            out = {"err2": str(e)}
+        except Exception as e:
+            out = {"err": str(e)}
         return json.dumps(out)
 
     def getTouriteSiteById(self,data):
@@ -68,7 +68,7 @@ class Region(object):
             port = url.port
             conn = psycopg2.connect(dbname=dbname, user=user, password=password, host=host, port=port)
         except Exception as e:
-            out = {"err": "Unable to connect to the database"}
+            out = {"err": str(e)}
         try:
             cur = conn.cursor()
             cur.execute("""SELECT * from tbl_tourist_site where id = '{0}'""".format(data['id']))
@@ -95,8 +95,8 @@ class Region(object):
                     'code':'01',
                     'msg':'Failed to retrieve data',
                     'data':[] }
-        except:
-            out = {"err": "General SQL Error"}
+        except Exception as e:
+            out = {"err": str(e)}
         return json.dumps(out)
 
 
