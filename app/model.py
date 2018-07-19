@@ -87,7 +87,7 @@ class Region(object):
                     "tourist_site_description": row[5] })
             
             if data != []:
-                weather_data = weather.getTouristSiteWeather(data['tourist_site_area_name'])
+                weather_data = self.getTouristSiteWeather(data['tourist_site_area_name'])
                 out = {
                     'code':'00',
                     'msg':'Data Retrieved Successfully',
