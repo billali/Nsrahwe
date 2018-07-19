@@ -37,11 +37,11 @@ def server_error(error):
   return render_template('500.html'), 500
 
 
-@app.route('/' , methods=['GET', 'POST'])
+@app.route('/' , methods=['GET'])
 def root_route():
     return render_template("pages/base_page.html")
 
-@app.route('/selected_region' , methods=['GET','POST'])
+@app.route('/selected_region' , methods=['POST'])
 def selected_region():
 	if request.method == 'POST':
 		request_data = request.form.to_dict()
@@ -58,7 +58,7 @@ def selected_region():
     	}
 		return json.dumps(data)
 
-@app.route('/site_id' , methods=['GET','POST'])
+@app.route('/site_id' , methods=['POST'])
 def site_id():
 	if request.method == 'POST':
 		request_data = request.form.to_dict()
