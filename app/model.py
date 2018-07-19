@@ -41,7 +41,7 @@ class Region(object):
             out = {"err": str(e)}
         try:
             cur = conn.cursor()
-            cur.execute("""SELECT * from tbl_tourist_site where region_shortname = '{0}'""".format(data['region_shortname']))
+            cur.execute("""SELECT * from tourist_site where region_shortname = '{0}'""".format(data['region_shortname']))
             rows = cur.fetchall()
          
             data = []
@@ -71,7 +71,7 @@ class Region(object):
             out = {"err": str(e)}
         try:
             cur = conn.cursor()
-            cur.execute("""SELECT * from tbl_tourist_site where id = '{0}'""".format(data['id']))
+            cur.execute("""SELECT * from tourist_site where id = '{0}'""".format(data['id']))
             rows = cur.fetchall()
             data = []
             for row in rows:
