@@ -73,7 +73,7 @@ class Region(object):
             port = url.port
             conn = psycopg2.connect(dbname=dbname, user=user, password=password, host=host, port=port)
         except Exception as e:
-            out = {"err": str(e)}
+            out = {"err1": str(e)}
         try:
             cur = conn.cursor()
             cur.execute("""SELECT * from tourist_site where id = '{0}'""".format(data['id']))
@@ -84,7 +84,7 @@ class Region(object):
                     "id": row[0], 
                     "tourist_site_name": row[1],
                     "tourist_site_image": row[2], 
-                    "tourist_alt_name": row[3],
+                    "tourist_alt_name": rowgetTouriteSiteById[3],
                     "region_shortname": row[4], 
                     "tourist_site_description": row[5],
                     "tourist_site_area_name": row[6] })
@@ -104,5 +104,5 @@ class Region(object):
                     'msg':'Failed to retrieve data',
                     'data':[] }
         except Exception as e:
-            out = {"err": str(e)}
+            out = {"err2": str(e)}
         return json.dumps(out)
