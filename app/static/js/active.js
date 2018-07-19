@@ -172,7 +172,7 @@ function get_site_id(id,tourist_site_area_name){
                           '<div class="">'+
                             '<p style="padding-top: 1em;color: #800000;">'+data.data[0]['tourist_site_description']+'</p>'+
                             '<p style="color: #800000;font-weight: bold;">Current Temperature : <span> '+data.weather_data['temp']+'&deg;C</span></p>'+
-                            '<p style="color: #800000;font-weight: bold;">Current Humidity : <span> '+data.weather_data['humidity']+'<i class="fa fa-tint"></i> </span></p>'+
+                            '<p style="color: #800000;font-weight: bold;">Current Humidity : <span> '+data.weather_data['humidity']+' <i class="fa fa-tint"></i> </span></p>'+
                           '</div>';
 
            
