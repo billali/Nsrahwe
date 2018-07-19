@@ -48,6 +48,8 @@ def selected_region():
 		print("Printing request data")
 		print(request_data)
 		data= region.getTouriteSiteByRegion(request_data)
+		print("Printing  data")
+		print(data)
 		return json.dumps(data)
 	else:
 		data = {
