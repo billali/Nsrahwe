@@ -62,8 +62,7 @@ class Region(object):
     def getTouriteSiteById(self,data):
         conn = ""
         out = []
-        print("Printing incomg request in getTouriteSiteById")
-        print(data)
+        
         try:
             url = urlparse.urlparse(os.environ['DATABASE_URL'])
             dbname = url.path[1:]
@@ -75,6 +74,8 @@ class Region(object):
         except Exception as e:
             out = {"err1": str(e)}
         try:
+            print("Printing incomg request in getTouriteSiteById")
+            print(data)
             cur = conn.cursor()
             cur.execute("""SELECT * from tourist_site where id = '{0}'""".format(data['id']))
             rows = cur.fetchall()
@@ -90,7 +91,7 @@ class Region(object):
                     "tourist_site_area_name": row[6] })
             
             if data != []:
-                weather_data = self.getTouristSiteWeather(data['tourist_site_area_name'])
+                #weather_data = self.getTouristSiteWeather(data['tourist_site_area_name'])
                 print("Printing weather_data in site id")
                 print("weather_data")
                 out = {
