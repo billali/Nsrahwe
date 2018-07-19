@@ -106,7 +106,7 @@
 
             $.postJSON("/selected_region", formData, function(data){
                 console.log("Printing response from db");
-                console.log(data);
+                console.log(data['code']);
             
             if (data.code == "00") {
 
