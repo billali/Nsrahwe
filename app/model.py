@@ -46,7 +46,7 @@ class Region(object):
          
             data = []
             for row in rows:
-                data.append({ "id": row[0], "tourist_site_name": row[1], "tourist_site_image": row[2], "tourist_alt_name": row[3], "region_shortname": row[4], "tourist_site_description": row[5] })
+                data.append({ "id": row[0], "tourist_site_name": row[1], "tourist_site_image": row[2], "tourist_alt_name": row[3], "region_shortname": row[4], "tourist_site_description": row[5],"tourist_site_area_name": row[6] })
           
             if data == []:
                 out = {'code': '01', 'msg': 'Failed to retrieve data', 'data': [] }
