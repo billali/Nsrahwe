@@ -50,7 +50,7 @@ def selected_region():
 		data= region.getTouriteSiteByRegion(request_data)
 		print("Printing  data")
 		print(data)
-		return json.dumps(data)
+		return data
 	else:
 		data = {
     			'code':'02',
@@ -63,7 +63,7 @@ def site_id():
 	if request.method == 'POST':
 		request_data = request.form.to_dict()
 		data= region.getTouriteSiteById(request_data)
-		return json.dumps(data)
+		return data
 	else:
 		data = {
     			'code':'02',
