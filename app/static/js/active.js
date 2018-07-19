@@ -105,6 +105,8 @@
             $('#loading').show('fast');
 
             $.postJSON("/selected_region", formData, function(data){
+                console.log("Printing response from db");
+                console.log(data);
             
             if (data.code == "00") {
 
