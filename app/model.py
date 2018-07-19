@@ -11,18 +11,21 @@ class Region(object):
         super(Region, self).__init__()
 
     def getTouristSiteWeather(self,city):
-        print(city)
-        if city!="":
-            url = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric"+ "&APPID=e2cd7d4ec205a87e9fedc5b591cedd72"
-            result = requests.get(url)
-            result = json.loads(result.text)
-            weather_data = {
-                'temp': result['main']['temp'],
-                'humidity': result['main']['humidity']
-            }
-            
-
-            return weather_data
+        try:
+            if city!="":
+                url = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric"+ "&APPID=e2cd7d4ec205a87e9fedc5b591cedd72"
+                result = requests.get(url)
+                result = json.loads(result.text)
+                weather_data = {
+                    'temp': result['main']['temp'],
+                    'humidity': result['main']['humidity']
+                }
+                return weather_data
+            else:
+                out = { 'code': '01', 'msg': 'City name is empty', 'data': [] }
+        except Exception as e:
+            out = {"err": str(e)}
+        
     
 
     def getTouriteSiteByRegion(self,data):
@@ -84,11 +87,11 @@ class Region(object):
                     "tourist_site_description": row[5] })
             
             if data != []:
-                # weather_data = weather.getTouristSiteWeather(data['city'])
+                weather_data = weather.getTouristSiteWeather(data['tourist_site_area_name'])
                 out = {
                     'code':'00',
                     'msg':'Data Retrieved Successfully',
-                    #'weather':weather_data,
+                    'weather':weather_data,
                     'data':data }
             else:
                 out = {
@@ -98,19 +101,3 @@ class Region(object):
         except Exception as e:
             out = {"err": str(e)}
         return json.dumps(out)
-
-
-
-
-
-
-
-
-# if __name__ == '__main__':
-#     weather = Region()
-
-#     city = 'accra'
-#     weather_data = weather.getTouristSiteWeather(city)
-#     print("Printing weather condition")
-#     print(weather_data)
-

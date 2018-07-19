@@ -48,8 +48,6 @@ def selected_region():
 		print("Printing request data")
 		print(request_data)
 		data= region.getTouriteSiteByRegion(request_data)
-		print("Printing  data")
-		print(data)
 		return data
 	else:
 		data = {
@@ -63,6 +61,8 @@ def site_id():
 	if request.method == 'POST':
 		request_data = request.form.to_dict()
 		data= region.getTouriteSiteById(request_data)
+		print("Printing  data in site id")
+		print(data)
 		return data
 	else:
 		data = {

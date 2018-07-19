@@ -121,7 +121,7 @@
 
                 for (var i = 0; i < data.data.length; i++) {
               
-                tblBodyHtml += '<div onclick="get_site_id(\''+ data.data[i]['id'] +'\')" class="col-md-3">'+
+                tblBodyHtml += '<div onclick="get_site_id(\''+ data.data[i]['id'] +'\',\''+ data.data[i]['tourist_site_area_name'] +'\')" class="col-md-3">'+
                                     '<div class="card" style="width: 15rem;height:20rem;cursor:pointer;">'+
                                       '<img style="max-width: 238px;height: 238px;" class="card-img-top" src="static/imgs/bg-img/'+data.data[i]['tourist_site_image']+'" alt="'+data.data[i]['tourist_alt_name']+'">'+
                                       '<div class="card-body">'+
@@ -149,18 +149,19 @@
 
 
 
-function get_site_id(id){
+function get_site_id(id,tourist_site_area_name){
     
     console.log("Printing id");
     console.log(id);
 
     var formData = {
         'id': id,
+        'tourist_site_area_name':tourist_site_area_name
     };
 
     $.postJSON("/site_id", formData, function(data){
 
-        console.log("Printing site id response");
+        console.log("Printing site id and area name response");
         console.log(data);
             
         if (data.code == "00") {
