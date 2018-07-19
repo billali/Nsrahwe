@@ -68,7 +68,7 @@ def site_id():
 		return json.dumps(data)
 
 @app.route('/sit_location' , methods=['GET','POST'])
-def site_id():
+def sit_location():
 	return render_template("pages/location_api.html")
 
 
