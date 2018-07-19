@@ -67,7 +67,7 @@ class Region(object):
             host = url.hostname
             port = url.port
             conn = psycopg2.connect(dbname=dbname, user=user, password=password, host=host, port=port)
-        except:
+        except Exception as e:
             out = {"err": "Unable to connect to the database"}
         try:
             cur = conn.cursor()
