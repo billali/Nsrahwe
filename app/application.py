@@ -45,6 +45,8 @@ def root_route():
 def selected_region():
 	if request.method == 'POST':
 		request_data = request.form.to_dict()
+		print("Printing request data")
+		print(request_data)
 		data= region.getTouriteSiteByRegion(request_data)
 		return json.dumps(data)
 	else:
