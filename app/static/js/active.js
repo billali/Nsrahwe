@@ -162,8 +162,8 @@ function get_site_id(id,tourist_site_area_name){
 
     $.postJSON("/site_id", formData, function(data){
 
-        console.log("Printing site id and area name response");
-        console.log(data);
+        /*console.log("Printing site id and area name response");
+        console.log(data);*/
             
         if (data.code == "00") {
 

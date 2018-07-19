@@ -84,13 +84,13 @@ class Region(object):
                     "id": row[0], 
                     "tourist_site_name": row[1],
                     "tourist_site_image": row[2], 
-                    "tourist_alt_name": rowgetTouriteSiteById[3],
+                    "tourist_alt_name": row[3],
                     "region_shortname": row[4], 
                     "tourist_site_description": row[5],
                     "tourist_site_area_name": row[6] })
             
             if data != []:
-                #weather_data = self.getTouristSiteWeather(data['tourist_site_area_name'])
+                weather_data = self.getTouristSiteWeather(data['tourist_site_area_name'])
                 print("Printing weather_data in site id")
                 print("weather_data")
                 out = {
