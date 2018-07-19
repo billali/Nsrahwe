@@ -146,7 +146,8 @@
             });
         }
     });
-
+console.log("Printing site id and area name response ");
+        console.log(data);
 
 
 function get_site_id(id,tourist_site_area_name){
@@ -169,12 +170,12 @@ function get_site_id(id,tourist_site_area_name){
 
             var tblBodyHtml = ""
 
-            for (var i = 0; i < data.data.length; i++) {
+            /*for (var i = 0; i < data.data.length; i++) {*/
           
-            tblBodyHtml += '<img style="max-height: 286px;" class="card-img-top" src="static/imgs/bg-img/'+data.data[i]['tourist_site_image']+'" alt="'+data.data[i]['tourist_alt_name']+'">'+
+            tblBodyHtml += '<img style="max-height: 286px;" class="card-img-top" src="static/imgs/bg-img/'+data.data['tourist_site_image']+'" alt="'+data.data['tourist_alt_name']+'">'+
                           '<div class="">'+
-                            '<p style="padding-top: 1em;color: #800000;">'+data.data[i]['tourist_site_description']+'</p>'+
-                            '<p style="color: #800000;font-weight: bold;">Current Temperature : <span> 90&deg;C</span></p>'+
+                            '<p style="padding-top: 1em;color: #800000;">'+data.data['tourist_site_description']+'</p>'+
+                            '<p style="color: #800000;font-weight: bold;">Current Temperature : <span> '++'&deg;C</span></p>'+
                             '<p style="color: #800000;font-weight: bold;">Current Wind : <span> 90mph </span></p>'+
                           '</div>';
 
@@ -184,7 +185,7 @@ function get_site_id(id,tourist_site_area_name){
             $('#siteDetailsModal').modal("show");
             
 
-        }
+     /*   }*/
         }else{
 
         }
