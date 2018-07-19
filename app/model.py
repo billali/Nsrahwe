@@ -91,12 +91,11 @@ class Region(object):
             
             if myList != []:
                 weather_data = self.getTouristSiteWeather(data['tourist_site_area_name'])
-                print("Printing weather_data in site id")
-                print(weather_data)
                 out = {
                     'code':'00',
                     'msg':'Data Retrieved Successfully',
-                    'data':data }
+                    'weather_data': weather_data,
+                    'data':myList }
             else:
                 out = {
                     'code':'01',

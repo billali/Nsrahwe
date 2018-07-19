@@ -58,8 +58,6 @@ def site_id():
 	if request.method == 'POST':
 		request_data = request.form.to_dict()
 		data= region.getTouriteSiteById(request_data)
-		print("Printing  data in site id")
-		print(data)
 		return data
 	else:
 		data = {
