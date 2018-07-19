@@ -24,7 +24,7 @@ app.config['PROPAGATE_EXCEPTIONS'] = True
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 app.config.from_object(__name__)
 
-db.init_app(app)
+# db.init_app(app)
 
 # Sample HTTP error handling
 @app.errorhandler(404)
