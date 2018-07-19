@@ -140,7 +140,7 @@ class Region(db.Model):
         
         try:
             
-            result = db.query.filter_by(region_shortname = '{0}'.format(data['region_shortname'])).all()
+            result = Region.query.filter_by(region_shortname = '{0}'.format(data['region_shortname'])).all()
             db.session.commit()
             print("Printing data from db")
             print(result)
