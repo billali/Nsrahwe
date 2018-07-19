@@ -188,6 +188,12 @@ function get_site_id(id,tourist_site_area_name){
 
 }
 
+
+function get_tourist_location(){
+    window.location = "/sit_location";
+}
+
+
     
 function validate_text_feild(value, element){
 
