@@ -62,6 +62,8 @@ class Region(object):
     def getTouriteSiteById(self,data):
         conn = ""
         out = []
+        print("Printing incomg request in getTouriteSiteById")
+        print(data)
         try:
             url = urlparse.urlparse(os.environ['DATABASE_URL'])
             dbname = url.path[1:]
