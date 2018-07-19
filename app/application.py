@@ -15,7 +15,6 @@ from app.model import Region
 
 region = Region()
 
-
 # Creating flask application instance
 app = Flask(__name__)
 

@@ -90,7 +90,7 @@ class Region(object):
                     "tourist_site_area_name": row[6] })
             
             if data != []:
-                weather_data = self.getTouristSiteWeather(data['tourist_site_area_name'])
+                #weather_data = self.getTouristSiteWeather(data['tourist_site_area_name'])
                 print("Printing weather_data in site id")
                 print("weather_data")
                 out = {
