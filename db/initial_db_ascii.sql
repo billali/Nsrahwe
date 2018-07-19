@@ -94,15 +94,14 @@ ships from interfering in their trade in the Shama area. Sebastian was originall
 ('Tongo Whispering Rocks','Tongo_Rocks.jpg', 'Tongo Rocks pic','UER', 
 'Tongo is a small town near the Upper East regional capital, Bolgatanga, and the capital of Talensi-Nabdam district,
  a district in the Upper East Region of Northern Ghana. Tongo is known for the, Tengzug shrine, Tongo whispering rocks and
- for its sowing and harvest festivals. The Tengzug shrine, tucked away in the remote village of Tengzug in Tongo, is 
+ for its sowing and harvest festivals. 
 '),
 ('Bolga Market','bolga_market.jpg', 'bolga market pic','UER', 
 'A splendid place to meet traders from all over the region and bargain for basket ware, leather goods and traditional clothing.
 '),
 ('Wli waterfalls','Wli_waterfalls_1.jpg', 'Wli waterfalls pic','VR', 
 'Wli Waterfalls is the highest waterfall in Ghana and the tallest in West Africa. It has a lower and an upper fall.
- Wli Waterfalls
- is located 20 km from Hohoe in the Volta Region of Ghana. The falls is known locally as Agumatsa
+ Wli Waterfalls is located 20 km from Hohoe in the Volta Region of Ghana. The falls is known locally as Agumatsa
  waterfalls - meaning, "Allow Me to Flow."
 '),
 ('Tafi Atome Monkey Sanctuary','tafi_atome_monkey_sanctuary.jpg', 'Tafi Atome Monkey Sanctuary pic','VR', 
