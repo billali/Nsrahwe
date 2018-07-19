@@ -145,11 +145,11 @@ Castle, Cape Coast Castle and the Kakum Rainforest.'),
 'Cape Coast Castle is one of about forty "slave castles", or large commercial forts, built on the Gold Coast of West
  Africa (now Ghana) by European traders.'),
 ('Elmina Castle','Elmina_Castle.jpg', 'Elmina-Castle pic','CR', 
-'Elmina Castle was erected by the Portuguese in 1482 as São Jorge da Mina (St. George of the Mine) Castle, also 
+'Elmina Castle was erected by the Portuguese in 1482 as So Jorge da Mina (St. George of the Mine) Castle, also 
 known simply as Mina or Feitoria da Mina) in present-day Elmina, Ghana (formerly the Gold Coast). It was the first
  trading post built on the Gulf of Guinea, so is the oldest European building in existence south of the Sahara. '),
 ('belle Game Reserve','Gbelle_Game_Reserve1.jpg', 'Gbelle-Game-Reserve pic','UWR', 
-'The Gbelle Reserve which measures 565km² is an important sanctuary for endangered species of wildlife in the country.
+'The Gbelle Reserve which measures 565km is an important sanctuary for endangered species of wildlife in the country.
  The flora is Guinea Savannah vegetation, while the fauna boasts a collection of animals such as buffalos,
  elephants, bucks, rhinos, and the largest hers of roan antelopes in Ghana.'),
 ('Wa Naas Palace','WaNaa_1.jpg', 'PalaceoftheWaNaa1 pic','UWR', 
@@ -170,7 +170,7 @@ of friendship with the British. He was later(1897) killed by slave raiders, but 
 km from Accra and 430km from Kumasi.'),
 ('Larabanga Mosque', 'Larabanga_Mosque_Ghana.jpg', 'Larabanga Mosque pic','NR', 
 'A 13th century mosque, believed to be first built by Moorish traders, it is one of the holiest site in Ghana.
- Its distinctive façade has been widely photographed. '),
+ Its distinctive faade has been widely photographed. '),
 ('Daboya', 'Daboya.JPG', 'Daboya pic','NR', 
 'Daboya is 89km west of tamale, Daboya is the 16th century town from the Gonja Kingdom, and a famous source for hand made textiles. '),
 ('Salaga', 'salaga.jpeg', 'salaga pic','NR', 
