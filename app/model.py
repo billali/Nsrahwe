@@ -112,7 +112,7 @@ class Region(db.Model):
     region_shortname = db.Column(db.String(120), unique=True)
     tourist_site_description = db.Column(db.String(120), unique=True)
 
-    def __init__(self, tourist_site_name,tourist_site_image,tourist_alt_name,region_shortname,tourist_site_description):
+    def __init__(self, tourist_site_name='',tourist_site_image='',tourist_alt_name='',region_shortname='',tourist_site_description=''):
         self.tourist_site_name = tourist_site_name,
         self.tourist_site_image = tourist_site_image
         self.tourist_alt_name = tourist_alt_name
