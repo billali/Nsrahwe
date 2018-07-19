@@ -10,6 +10,7 @@ from flask import redirect
 from flask import url_for
 import json
 from app.model import Region
+from flask.ext.sqlalchemy import SQLAlchemy
 
 
 region = Region()
@@ -20,8 +21,11 @@ app = Flask(__name__)
 
 # Configurations
 app.config['PROPAGATE_EXCEPTIONS'] = True
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 app.config.from_object(__name__)
 
+db = SQLAlchemy(app)
+heroku = Heroku(app)
 # Sample HTTP error handling
 @app.errorhandler(404)
 def not_found(error):
@@ -48,7 +52,7 @@ def selected_region():
     			'code':'02',
     			'msg':'Request Method Invalid'
     	}
-		return jsonify(**data)
+		return json.dumps(data)
 
 @app.route('/site_id' , methods=['GET','POST'])
 def site_id():
